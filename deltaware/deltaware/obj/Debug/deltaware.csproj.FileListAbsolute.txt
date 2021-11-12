@@ -1,0 +1,11 @@
+C:\Projects\C#\ApartmentManagament\deltaware\deltaware\bin\Debug\deltaware.exe.config
+C:\Projects\C#\ApartmentManagament\deltaware\deltaware\bin\Debug\deltaware.exe
+C:\Projects\C#\ApartmentManagament\deltaware\deltaware\bin\Debug\deltaware.pdb
+C:\Projects\C#\ApartmentManagament\deltaware\deltaware\obj\Debug\deltaware.csproj.AssemblyReference.cache
+C:\Projects\C#\ApartmentManagament\deltaware\deltaware\obj\Debug\deltaware.csproj.SuggestedBindingRedirects.cache
+C:\Projects\C#\ApartmentManagament\deltaware\deltaware\obj\Debug\deltaware.Form1.resources
+C:\Projects\C#\ApartmentManagament\deltaware\deltaware\obj\Debug\deltaware.Properties.Resources.resources
+C:\Projects\C#\ApartmentManagament\deltaware\deltaware\obj\Debug\deltaware.csproj.GenerateResource.cache
+C:\Projects\C#\ApartmentManagament\deltaware\deltaware\obj\Debug\deltaware.csproj.CoreCompileInputs.cache
+C:\Projects\C#\ApartmentManagament\deltaware\deltaware\obj\Debug\deltaware.exe
+C:\Projects\C#\ApartmentManagament\deltaware\deltaware\obj\Debug\deltaware.pdb
