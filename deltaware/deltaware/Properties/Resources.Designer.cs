@@ -63,9 +63,9 @@ namespace deltaware.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
-        internal static System.Drawing.Bitmap Main {
+        internal static System.Drawing.Bitmap Add {
             get {
-                object obj = ResourceManager.GetObject("Main", resourceCulture);
+                object obj = ResourceManager.GetObject("Add", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace deltaware.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
-        internal static System.Drawing.Bitmap resizedMain {
+        internal static System.Drawing.Bitmap Change {
             get {
-                object obj = ResourceManager.GetObject("resizedMain", resourceCulture);
+                object obj = ResourceManager.GetObject("Change", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +83,69 @@ namespace deltaware.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
-        internal static System.Drawing.Bitmap resizedMain1 {
+        internal static System.Drawing.Bitmap groupMain {
             get {
-                object obj = ResourceManager.GetObject("resizedMain1", resourceCulture);
+                object obj = ResourceManager.GetObject("groupMain", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap groupYonetim {
+            get {
+                object obj = ResourceManager.GetObject("groupYonetim", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap Rectangle_3 {
+            get {
+                object obj = ResourceManager.GetObject("Rectangle 3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap Remove {
+            get {
+                object obj = ResourceManager.GetObject("Remove", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap resizedBG {
+            get {
+                object obj = ResourceManager.GetObject("resizedBG", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap selectedTextBox {
+            get {
+                object obj = ResourceManager.GetObject("selectedTextBox", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap unselectedTextBox {
+            get {
+                object obj = ResourceManager.GetObject("unselectedTextBox", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

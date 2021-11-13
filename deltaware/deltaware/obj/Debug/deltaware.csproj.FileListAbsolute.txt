@@ -9,3 +9,4 @@ C:\Projects\C#\ApartmentManagament\deltaware\deltaware\obj\Debug\deltaware.cspro
 C:\Projects\C#\ApartmentManagament\deltaware\deltaware\obj\Debug\deltaware.csproj.CoreCompileInputs.cache
 C:\Projects\C#\ApartmentManagament\deltaware\deltaware\obj\Debug\deltaware.exe
 C:\Projects\C#\ApartmentManagament\deltaware\deltaware\obj\Debug\deltaware.pdb
+C:\Projects\C#\ApartmentManagament\deltaware\deltaware\obj\Debug\deltaware.Test.resources
