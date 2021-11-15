@@ -16,6 +16,7 @@ namespace deltaware
     {
         public string selectedButtonName = "Anasayfa";
         public bool check = false;
+        public int timer = 0;
         public Form1()
         {
             InitializeComponent();
@@ -131,11 +132,12 @@ namespace deltaware
                                 ozelNotBilgisiList.Items.Add("-");
                             else
                                 ozelNotBilgisiList.Items.Add(ozelNotBilgisiTextBoxYonetim.Text);
+                            notification(2);
                         }
-                        //notificationYonetim.text
                         else
                         {
                             SystemSounds.Beep.Play();
+                            notification(1);
                         }
                         break;
                     case "RemoveButtonYonetim":
@@ -212,11 +214,13 @@ namespace deltaware
                     {
                         SystemSounds.Hand.Play();
                         check = true;
+                        notification(0);
                         textBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
                     }else
                     {
                         textBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(133)))), ((int)(((byte)(198)))));
                         check = false;
+                        clearNotification();
                     }
                     break;
                 case "katVerisiTextBoxYonetim":
@@ -228,11 +232,13 @@ namespace deltaware
                         SystemSounds.Hand.Play();
                         textBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
                         check = true;
+                        notification(0);
                     }
                     else
                     {
                         textBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(133)))), ((int)(((byte)(198)))));
                         check = false;
+                        clearNotification();
                     }
                     break;
                 case "aidatBilgisiTextBoxYonetim":
@@ -244,11 +250,13 @@ namespace deltaware
                         SystemSounds.Hand.Play();
                         textBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
                         check = true;
+                        notification(0);
                     }
                     else
                     {
                         textBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(133)))), ((int)(((byte)(198)))));
                         check = false;
+                        clearNotification();
                     }
                     break;
                 case "ozelNotBilgisiTextBoxYonetim":
@@ -260,7 +268,41 @@ namespace deltaware
                     break;
             }
         }
+        public void notification(int id)
+        {
+            string message = "";
+            switch (id)
+            {
+                case 0:
+                    message = "Girilen verilerde hata bulunmaktadır.";
+                    notificationYonetim.ForeColor = System.Drawing.Color.FromArgb(198, 45, 45);
+                    break;
+                case 1:
+                    message = "Boş veya geçersiz bir veri girişi yapılmaya çalışıldı. Yada bu Ad ve Soyad ile kayıtlı bir kayıt bulunmakta.";
+                    notificationYonetim.ForeColor = System.Drawing.Color.FromArgb(198, 45, 45);
+                    break;
+                case 2:
+                    message = "Başarılı bir şekilde veri oluşturuldu.";
+                    notificationYonetim.ForeColor = System.Drawing.Color.FromArgb(80, 198, 45);
+                    break;
+                default:
+                    break;
+            }
+            if (timer < 1500)
+            {
+                notificationTimer.Start();
+                notificationYonetim.Text = message;
+            }else
+            {
+                notificationTimer.Stop();
+                clearNotification();
+            }
+        }
 
+        public void clearNotification()
+        {
+            notificationYonetim.Text = "";
+        }
         private void textChangedTextBoxYonetim(object sender, EventArgs e)
         {
 
@@ -281,6 +323,11 @@ namespace deltaware
         public bool IsAlphaNumericWithUnderscore(string input)
         {
             return Regex.IsMatch(input, "^[a-zA-Z0-9_]+$");
+        }
+
+        private void notificationTimer_Tick(object sender, EventArgs e)
+        {
+            timer++;
         }
     }
 }

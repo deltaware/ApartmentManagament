@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.anasayfaButton = new System.Windows.Forms.Label();
             this.yonetimButton = new System.Windows.Forms.Label();
             this.aidatButton = new System.Windows.Forms.Label();
@@ -39,6 +40,15 @@
             this.anasayfaGroupBox = new System.Windows.Forms.GroupBox();
             this.aidatlarLabel = new System.Windows.Forms.Label();
             this.yonetimGroupBox = new System.Windows.Forms.GroupBox();
+            this.notificationYonetim = new System.Windows.Forms.Label();
+            this.ozelNotBilgisiTextBoxYonetim = new System.Windows.Forms.TextBox();
+            this.aidatBilgisiTextBoxYonetim = new System.Windows.Forms.TextBox();
+            this.ozelNotBilgisiBGYonetim = new System.Windows.Forms.PictureBox();
+            this.katVerisiTextBoxYonetim = new System.Windows.Forms.TextBox();
+            this.aidatBilgisiBGYonetim = new System.Windows.Forms.PictureBox();
+            this.adSoyadTextBoxYonetim = new System.Windows.Forms.TextBox();
+            this.katVerisiBGYonetim = new System.Windows.Forms.PictureBox();
+            this.adSoyadBGYonetim = new System.Windows.Forms.PictureBox();
             this.ozelNotBilgisiList = new System.Windows.Forms.ListBox();
             this.aidatBedeliListYonetim = new System.Windows.Forms.ListBox();
             this.katBilgisiListYonetim = new System.Windows.Forms.ListBox();
@@ -50,28 +60,20 @@
             this.veriGirisiGroup = new System.Windows.Forms.PictureBox();
             this.veriListeleriLabel = new System.Windows.Forms.Label();
             this.veriGirisiLabel = new System.Windows.Forms.Label();
-            this.ozelNotBilgisiBGYonetim = new System.Windows.Forms.PictureBox();
-            this.aidatBilgisiBGYonetim = new System.Windows.Forms.PictureBox();
-            this.katVerisiBGYonetim = new System.Windows.Forms.PictureBox();
-            this.adSoyadBGYonetim = new System.Windows.Forms.PictureBox();
-            this.ozelNotBilgisiTextBoxYonetim = new System.Windows.Forms.TextBox();
-            this.aidatBilgisiTextBoxYonetim = new System.Windows.Forms.TextBox();
-            this.katVerisiTextBoxYonetim = new System.Windows.Forms.TextBox();
-            this.adSoyadTextBoxYonetim = new System.Windows.Forms.TextBox();
-            this.notificationYonetim = new System.Windows.Forms.Label();
+            this.notificationTimer = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.apartmanVerileriPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kalanAidatlarPicture)).BeginInit();
             this.anasayfaGroupBox.SuspendLayout();
             this.yonetimGroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ozelNotBilgisiBGYonetim)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aidatBilgisiBGYonetim)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.katVerisiBGYonetim)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.adSoyadBGYonetim)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ChangeButtonYonetim)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RemoveButtonYonetim)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AddButtonYonetim)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.veriListeleriGroup)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.veriGirisiGroup)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ozelNotBilgisiBGYonetim)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aidatBilgisiBGYonetim)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.katVerisiBGYonetim)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.adSoyadBGYonetim)).BeginInit();
             this.SuspendLayout();
             // 
             // anasayfaButton
@@ -242,20 +244,143 @@
             this.yonetimGroupBox.TabIndex = 12;
             this.yonetimGroupBox.TabStop = false;
             // 
+            // notificationYonetim
+            // 
+            this.notificationYonetim.AutoSize = true;
+            this.notificationYonetim.Font = new System.Drawing.Font("Nunito Sans", 13F, System.Drawing.FontStyle.Bold);
+            this.notificationYonetim.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.notificationYonetim.Location = new System.Drawing.Point(6, 488);
+            this.notificationYonetim.Name = "notificationYonetim";
+            this.notificationYonetim.Size = new System.Drawing.Size(0, 26);
+            this.notificationYonetim.TabIndex = 25;
+            this.notificationYonetim.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // ozelNotBilgisiTextBoxYonetim
+            // 
+            this.ozelNotBilgisiTextBoxYonetim.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(247)))), ((int)(((byte)(251)))));
+            this.ozelNotBilgisiTextBoxYonetim.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ozelNotBilgisiTextBoxYonetim.Font = new System.Drawing.Font("Nunito Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.ozelNotBilgisiTextBoxYonetim.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(133)))), ((int)(((byte)(198)))));
+            this.ozelNotBilgisiTextBoxYonetim.Location = new System.Drawing.Point(65, 378);
+            this.ozelNotBilgisiTextBoxYonetim.Name = "ozelNotBilgisiTextBoxYonetim";
+            this.ozelNotBilgisiTextBoxYonetim.Size = new System.Drawing.Size(227, 26);
+            this.ozelNotBilgisiTextBoxYonetim.TabIndex = 24;
+            this.ozelNotBilgisiTextBoxYonetim.Text = "Özel Not";
+            this.ozelNotBilgisiTextBoxYonetim.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.ozelNotBilgisiTextBoxYonetim.Click += new System.EventHandler(this.yonetimTextBoxClick);
+            this.ozelNotBilgisiTextBoxYonetim.TextChanged += new System.EventHandler(this.textChangedTextBoxYonetim);
+            this.ozelNotBilgisiTextBoxYonetim.MouseEnter += new System.EventHandler(this.yonetimTextBoxEnter);
+            this.ozelNotBilgisiTextBoxYonetim.MouseLeave += new System.EventHandler(this.yonetimTextBoxLeave);
+            // 
+            // aidatBilgisiTextBoxYonetim
+            // 
+            this.aidatBilgisiTextBoxYonetim.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(247)))), ((int)(((byte)(251)))));
+            this.aidatBilgisiTextBoxYonetim.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.aidatBilgisiTextBoxYonetim.Font = new System.Drawing.Font("Nunito Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.aidatBilgisiTextBoxYonetim.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(133)))), ((int)(((byte)(198)))));
+            this.aidatBilgisiTextBoxYonetim.Location = new System.Drawing.Point(65, 289);
+            this.aidatBilgisiTextBoxYonetim.Name = "aidatBilgisiTextBoxYonetim";
+            this.aidatBilgisiTextBoxYonetim.Size = new System.Drawing.Size(227, 26);
+            this.aidatBilgisiTextBoxYonetim.TabIndex = 23;
+            this.aidatBilgisiTextBoxYonetim.Text = "Aidat Bilgisi";
+            this.aidatBilgisiTextBoxYonetim.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.aidatBilgisiTextBoxYonetim.Click += new System.EventHandler(this.yonetimTextBoxClick);
+            this.aidatBilgisiTextBoxYonetim.TextChanged += new System.EventHandler(this.textChangedTextBoxYonetim);
+            this.aidatBilgisiTextBoxYonetim.MouseEnter += new System.EventHandler(this.yonetimTextBoxEnter);
+            this.aidatBilgisiTextBoxYonetim.MouseLeave += new System.EventHandler(this.yonetimTextBoxLeave);
+            // 
+            // ozelNotBilgisiBGYonetim
+            // 
+            this.ozelNotBilgisiBGYonetim.BackColor = System.Drawing.Color.White;
+            this.ozelNotBilgisiBGYonetim.Image = global::deltaware.Properties.Resources.unselectedTextBox;
+            this.ozelNotBilgisiBGYonetim.Location = new System.Drawing.Point(34, 358);
+            this.ozelNotBilgisiBGYonetim.Name = "ozelNotBilgisiBGYonetim";
+            this.ozelNotBilgisiBGYonetim.Size = new System.Drawing.Size(276, 85);
+            this.ozelNotBilgisiBGYonetim.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ozelNotBilgisiBGYonetim.TabIndex = 20;
+            this.ozelNotBilgisiBGYonetim.TabStop = false;
+            // 
+            // katVerisiTextBoxYonetim
+            // 
+            this.katVerisiTextBoxYonetim.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(247)))), ((int)(((byte)(251)))));
+            this.katVerisiTextBoxYonetim.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.katVerisiTextBoxYonetim.Font = new System.Drawing.Font("Nunito Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.katVerisiTextBoxYonetim.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(133)))), ((int)(((byte)(198)))));
+            this.katVerisiTextBoxYonetim.Location = new System.Drawing.Point(65, 201);
+            this.katVerisiTextBoxYonetim.Name = "katVerisiTextBoxYonetim";
+            this.katVerisiTextBoxYonetim.Size = new System.Drawing.Size(227, 26);
+            this.katVerisiTextBoxYonetim.TabIndex = 22;
+            this.katVerisiTextBoxYonetim.Text = "Kat Bilgisi";
+            this.katVerisiTextBoxYonetim.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.katVerisiTextBoxYonetim.Click += new System.EventHandler(this.yonetimTextBoxClick);
+            this.katVerisiTextBoxYonetim.TextChanged += new System.EventHandler(this.textChangedTextBoxYonetim);
+            this.katVerisiTextBoxYonetim.MouseEnter += new System.EventHandler(this.yonetimTextBoxEnter);
+            this.katVerisiTextBoxYonetim.MouseLeave += new System.EventHandler(this.yonetimTextBoxLeave);
+            // 
+            // aidatBilgisiBGYonetim
+            // 
+            this.aidatBilgisiBGYonetim.BackColor = System.Drawing.Color.White;
+            this.aidatBilgisiBGYonetim.Image = global::deltaware.Properties.Resources.unselectedTextBox;
+            this.aidatBilgisiBGYonetim.Location = new System.Drawing.Point(34, 267);
+            this.aidatBilgisiBGYonetim.Name = "aidatBilgisiBGYonetim";
+            this.aidatBilgisiBGYonetim.Size = new System.Drawing.Size(276, 85);
+            this.aidatBilgisiBGYonetim.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.aidatBilgisiBGYonetim.TabIndex = 19;
+            this.aidatBilgisiBGYonetim.TabStop = false;
+            // 
+            // adSoyadTextBoxYonetim
+            // 
+            this.adSoyadTextBoxYonetim.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(247)))), ((int)(((byte)(251)))));
+            this.adSoyadTextBoxYonetim.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.adSoyadTextBoxYonetim.Font = new System.Drawing.Font("Nunito Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.adSoyadTextBoxYonetim.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(133)))), ((int)(((byte)(198)))));
+            this.adSoyadTextBoxYonetim.Location = new System.Drawing.Point(65, 108);
+            this.adSoyadTextBoxYonetim.Name = "adSoyadTextBoxYonetim";
+            this.adSoyadTextBoxYonetim.Size = new System.Drawing.Size(227, 26);
+            this.adSoyadTextBoxYonetim.TabIndex = 21;
+            this.adSoyadTextBoxYonetim.Text = "Ad Soyad";
+            this.adSoyadTextBoxYonetim.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.adSoyadTextBoxYonetim.Click += new System.EventHandler(this.yonetimTextBoxClick);
+            this.adSoyadTextBoxYonetim.TextChanged += new System.EventHandler(this.textChangedTextBoxYonetim);
+            this.adSoyadTextBoxYonetim.MouseEnter += new System.EventHandler(this.yonetimTextBoxEnter);
+            this.adSoyadTextBoxYonetim.MouseLeave += new System.EventHandler(this.yonetimTextBoxLeave);
+            // 
+            // katVerisiBGYonetim
+            // 
+            this.katVerisiBGYonetim.BackColor = System.Drawing.Color.White;
+            this.katVerisiBGYonetim.Image = global::deltaware.Properties.Resources.unselectedTextBox;
+            this.katVerisiBGYonetim.Location = new System.Drawing.Point(34, 176);
+            this.katVerisiBGYonetim.Name = "katVerisiBGYonetim";
+            this.katVerisiBGYonetim.Size = new System.Drawing.Size(276, 85);
+            this.katVerisiBGYonetim.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.katVerisiBGYonetim.TabIndex = 18;
+            this.katVerisiBGYonetim.TabStop = false;
+            // 
+            // adSoyadBGYonetim
+            // 
+            this.adSoyadBGYonetim.BackColor = System.Drawing.Color.White;
+            this.adSoyadBGYonetim.Image = global::deltaware.Properties.Resources.unselectedTextBox;
+            this.adSoyadBGYonetim.Location = new System.Drawing.Point(34, 85);
+            this.adSoyadBGYonetim.Name = "adSoyadBGYonetim";
+            this.adSoyadBGYonetim.Size = new System.Drawing.Size(276, 85);
+            this.adSoyadBGYonetim.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.adSoyadBGYonetim.TabIndex = 17;
+            this.adSoyadBGYonetim.TabStop = false;
+            // 
             // ozelNotBilgisiList
             // 
             this.ozelNotBilgisiList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(247)))), ((int)(((byte)(251)))));
             this.ozelNotBilgisiList.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.ozelNotBilgisiList.Cursor = System.Windows.Forms.Cursors.Cross;
-            this.ozelNotBilgisiList.Font = new System.Drawing.Font("Nunito Sans", 8.999998F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.ozelNotBilgisiList.Font = new System.Drawing.Font("Nunito Sans", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.ozelNotBilgisiList.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(133)))), ((int)(((byte)(198)))));
             this.ozelNotBilgisiList.FormatString = "C1";
             this.ozelNotBilgisiList.FormattingEnabled = true;
-            this.ozelNotBilgisiList.ItemHeight = 17;
+            this.ozelNotBilgisiList.ItemHeight = 16;
             this.ozelNotBilgisiList.Location = new System.Drawing.Point(871, 101);
             this.ozelNotBilgisiList.Name = "ozelNotBilgisiList";
             this.ozelNotBilgisiList.SelectionMode = System.Windows.Forms.SelectionMode.None;
-            this.ozelNotBilgisiList.Size = new System.Drawing.Size(85, 340);
+            this.ozelNotBilgisiList.Size = new System.Drawing.Size(85, 336);
             this.ozelNotBilgisiList.TabIndex = 16;
             // 
             // aidatBedeliListYonetim
@@ -384,128 +509,9 @@
             this.veriGirisiLabel.Text = "Veri Girişi";
             this.veriGirisiLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // ozelNotBilgisiBGYonetim
+            // notificationTimer
             // 
-            this.ozelNotBilgisiBGYonetim.BackColor = System.Drawing.Color.White;
-            this.ozelNotBilgisiBGYonetim.Image = global::deltaware.Properties.Resources.unselectedTextBox;
-            this.ozelNotBilgisiBGYonetim.Location = new System.Drawing.Point(34, 358);
-            this.ozelNotBilgisiBGYonetim.Name = "ozelNotBilgisiBGYonetim";
-            this.ozelNotBilgisiBGYonetim.Size = new System.Drawing.Size(276, 85);
-            this.ozelNotBilgisiBGYonetim.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ozelNotBilgisiBGYonetim.TabIndex = 20;
-            this.ozelNotBilgisiBGYonetim.TabStop = false;
-            // 
-            // aidatBilgisiBGYonetim
-            // 
-            this.aidatBilgisiBGYonetim.BackColor = System.Drawing.Color.White;
-            this.aidatBilgisiBGYonetim.Image = global::deltaware.Properties.Resources.unselectedTextBox;
-            this.aidatBilgisiBGYonetim.Location = new System.Drawing.Point(34, 267);
-            this.aidatBilgisiBGYonetim.Name = "aidatBilgisiBGYonetim";
-            this.aidatBilgisiBGYonetim.Size = new System.Drawing.Size(276, 85);
-            this.aidatBilgisiBGYonetim.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.aidatBilgisiBGYonetim.TabIndex = 19;
-            this.aidatBilgisiBGYonetim.TabStop = false;
-            // 
-            // katVerisiBGYonetim
-            // 
-            this.katVerisiBGYonetim.BackColor = System.Drawing.Color.White;
-            this.katVerisiBGYonetim.Image = global::deltaware.Properties.Resources.unselectedTextBox;
-            this.katVerisiBGYonetim.Location = new System.Drawing.Point(34, 176);
-            this.katVerisiBGYonetim.Name = "katVerisiBGYonetim";
-            this.katVerisiBGYonetim.Size = new System.Drawing.Size(276, 85);
-            this.katVerisiBGYonetim.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.katVerisiBGYonetim.TabIndex = 18;
-            this.katVerisiBGYonetim.TabStop = false;
-            // 
-            // adSoyadBGYonetim
-            // 
-            this.adSoyadBGYonetim.BackColor = System.Drawing.Color.White;
-            this.adSoyadBGYonetim.Image = global::deltaware.Properties.Resources.unselectedTextBox;
-            this.adSoyadBGYonetim.Location = new System.Drawing.Point(34, 85);
-            this.adSoyadBGYonetim.Name = "adSoyadBGYonetim";
-            this.adSoyadBGYonetim.Size = new System.Drawing.Size(276, 85);
-            this.adSoyadBGYonetim.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.adSoyadBGYonetim.TabIndex = 17;
-            this.adSoyadBGYonetim.TabStop = false;
-            // 
-            // ozelNotBilgisiTextBoxYonetim
-            // 
-            this.ozelNotBilgisiTextBoxYonetim.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(247)))), ((int)(((byte)(251)))));
-            this.ozelNotBilgisiTextBoxYonetim.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.ozelNotBilgisiTextBoxYonetim.Font = new System.Drawing.Font("Nunito Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.ozelNotBilgisiTextBoxYonetim.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(133)))), ((int)(((byte)(198)))));
-            this.ozelNotBilgisiTextBoxYonetim.Location = new System.Drawing.Point(65, 378);
-            this.ozelNotBilgisiTextBoxYonetim.Name = "ozelNotBilgisiTextBoxYonetim";
-            this.ozelNotBilgisiTextBoxYonetim.Size = new System.Drawing.Size(227, 26);
-            this.ozelNotBilgisiTextBoxYonetim.TabIndex = 24;
-            this.ozelNotBilgisiTextBoxYonetim.Text = "Özel Not";
-            this.ozelNotBilgisiTextBoxYonetim.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.ozelNotBilgisiTextBoxYonetim.Click += new System.EventHandler(this.yonetimTextBoxClick);
-            this.ozelNotBilgisiTextBoxYonetim.TextChanged += new System.EventHandler(this.textChangedTextBoxYonetim);
-            this.ozelNotBilgisiTextBoxYonetim.MouseEnter += new System.EventHandler(this.yonetimTextBoxEnter);
-            this.ozelNotBilgisiTextBoxYonetim.MouseLeave += new System.EventHandler(this.yonetimTextBoxLeave);
-            // 
-            // aidatBilgisiTextBoxYonetim
-            // 
-            this.aidatBilgisiTextBoxYonetim.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(247)))), ((int)(((byte)(251)))));
-            this.aidatBilgisiTextBoxYonetim.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.aidatBilgisiTextBoxYonetim.Font = new System.Drawing.Font("Nunito Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.aidatBilgisiTextBoxYonetim.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(133)))), ((int)(((byte)(198)))));
-            this.aidatBilgisiTextBoxYonetim.Location = new System.Drawing.Point(65, 289);
-            this.aidatBilgisiTextBoxYonetim.Name = "aidatBilgisiTextBoxYonetim";
-            this.aidatBilgisiTextBoxYonetim.Size = new System.Drawing.Size(227, 26);
-            this.aidatBilgisiTextBoxYonetim.TabIndex = 23;
-            this.aidatBilgisiTextBoxYonetim.Text = "Aidat Bilgisi";
-            this.aidatBilgisiTextBoxYonetim.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.aidatBilgisiTextBoxYonetim.Click += new System.EventHandler(this.yonetimTextBoxClick);
-            this.aidatBilgisiTextBoxYonetim.TextChanged += new System.EventHandler(this.textChangedTextBoxYonetim);
-            this.aidatBilgisiTextBoxYonetim.MouseEnter += new System.EventHandler(this.yonetimTextBoxEnter);
-            this.aidatBilgisiTextBoxYonetim.MouseLeave += new System.EventHandler(this.yonetimTextBoxLeave);
-            // 
-            // katVerisiTextBoxYonetim
-            // 
-            this.katVerisiTextBoxYonetim.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(247)))), ((int)(((byte)(251)))));
-            this.katVerisiTextBoxYonetim.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.katVerisiTextBoxYonetim.Font = new System.Drawing.Font("Nunito Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.katVerisiTextBoxYonetim.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(133)))), ((int)(((byte)(198)))));
-            this.katVerisiTextBoxYonetim.Location = new System.Drawing.Point(65, 201);
-            this.katVerisiTextBoxYonetim.Name = "katVerisiTextBoxYonetim";
-            this.katVerisiTextBoxYonetim.Size = new System.Drawing.Size(227, 26);
-            this.katVerisiTextBoxYonetim.TabIndex = 22;
-            this.katVerisiTextBoxYonetim.Text = "Kat Bilgisi";
-            this.katVerisiTextBoxYonetim.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.katVerisiTextBoxYonetim.Click += new System.EventHandler(this.yonetimTextBoxClick);
-            this.katVerisiTextBoxYonetim.TextChanged += new System.EventHandler(this.textChangedTextBoxYonetim);
-            this.katVerisiTextBoxYonetim.MouseEnter += new System.EventHandler(this.yonetimTextBoxEnter);
-            this.katVerisiTextBoxYonetim.MouseLeave += new System.EventHandler(this.yonetimTextBoxLeave);
-            // 
-            // adSoyadTextBoxYonetim
-            // 
-            this.adSoyadTextBoxYonetim.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(247)))), ((int)(((byte)(251)))));
-            this.adSoyadTextBoxYonetim.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.adSoyadTextBoxYonetim.Font = new System.Drawing.Font("Nunito Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.adSoyadTextBoxYonetim.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(133)))), ((int)(((byte)(198)))));
-            this.adSoyadTextBoxYonetim.Location = new System.Drawing.Point(65, 108);
-            this.adSoyadTextBoxYonetim.Name = "adSoyadTextBoxYonetim";
-            this.adSoyadTextBoxYonetim.Size = new System.Drawing.Size(227, 26);
-            this.adSoyadTextBoxYonetim.TabIndex = 21;
-            this.adSoyadTextBoxYonetim.Text = "Ad Soyad";
-            this.adSoyadTextBoxYonetim.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.adSoyadTextBoxYonetim.Click += new System.EventHandler(this.yonetimTextBoxClick);
-            this.adSoyadTextBoxYonetim.TextChanged += new System.EventHandler(this.textChangedTextBoxYonetim);
-            this.adSoyadTextBoxYonetim.MouseEnter += new System.EventHandler(this.yonetimTextBoxEnter);
-            this.adSoyadTextBoxYonetim.MouseLeave += new System.EventHandler(this.yonetimTextBoxLeave);
-            // 
-            // notificationYonetim
-            // 
-            this.notificationYonetim.AutoSize = true;
-            this.notificationYonetim.Font = new System.Drawing.Font("Nunito Sans", 13F, System.Drawing.FontStyle.Bold);
-            this.notificationYonetim.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.notificationYonetim.Location = new System.Drawing.Point(6, 488);
-            this.notificationYonetim.Name = "notificationYonetim";
-            this.notificationYonetim.Size = new System.Drawing.Size(0, 26);
-            this.notificationYonetim.TabIndex = 25;
-            this.notificationYonetim.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.notificationTimer.Tick += new System.EventHandler(this.notificationTimer_Tick);
             // 
             // Form1
             // 
@@ -532,15 +538,15 @@
             this.anasayfaGroupBox.PerformLayout();
             this.yonetimGroupBox.ResumeLayout(false);
             this.yonetimGroupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ozelNotBilgisiBGYonetim)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aidatBilgisiBGYonetim)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.katVerisiBGYonetim)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.adSoyadBGYonetim)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ChangeButtonYonetim)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RemoveButtonYonetim)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.AddButtonYonetim)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.veriListeleriGroup)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.veriGirisiGroup)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ozelNotBilgisiBGYonetim)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aidatBilgisiBGYonetim)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.katVerisiBGYonetim)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.adSoyadBGYonetim)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -579,6 +585,7 @@
         private System.Windows.Forms.TextBox katVerisiTextBoxYonetim;
         private System.Windows.Forms.TextBox adSoyadTextBoxYonetim;
         private System.Windows.Forms.Label notificationYonetim;
+        private System.Windows.Forms.Timer notificationTimer;
 
         //
 
