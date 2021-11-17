@@ -10,3 +10,6 @@ C:\Projects\C#\ApartmentManagament\deltaware\deltaware\obj\Debug\deltaware.cspro
 C:\Projects\C#\ApartmentManagament\deltaware\deltaware\obj\Debug\deltaware.exe
 C:\Projects\C#\ApartmentManagament\deltaware\deltaware\obj\Debug\deltaware.pdb
 C:\Projects\C#\ApartmentManagament\deltaware\deltaware\obj\Debug\deltaware.Test.resources
+C:\Projects\C#\ApartmentManagament\deltaware\deltaware\bin\Debug\Newtonsoft.Json.dll
+C:\Projects\C#\ApartmentManagament\deltaware\deltaware\bin\Debug\Newtonsoft.Json.xml
+C:\Projects\C#\ApartmentManagament\deltaware\deltaware\obj\Debug\deltaware.csproj.CopyComplete

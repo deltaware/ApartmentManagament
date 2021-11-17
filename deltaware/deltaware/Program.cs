@@ -15,9 +15,9 @@ namespace deltaware
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Data data = new Data();
+            data.firstStart();
+            data.writeData("Burakcan Tokses", 1, "200", "-");
         }
     }
 }

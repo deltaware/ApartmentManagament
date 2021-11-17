@@ -61,6 +61,10 @@
             this.veriListeleriLabel = new System.Windows.Forms.Label();
             this.veriGirisiLabel = new System.Windows.Forms.Label();
             this.notificationTimer = new System.Windows.Forms.Timer(this.components);
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.apartmanVerileriPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kalanAidatlarPicture)).BeginInit();
             this.anasayfaGroupBox.SuspendLayout();
@@ -217,6 +221,10 @@
             // yonetimGroupBox
             // 
             this.yonetimGroupBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(247)))), ((int)(((byte)(251)))));
+            this.yonetimGroupBox.Controls.Add(this.label4);
+            this.yonetimGroupBox.Controls.Add(this.label3);
+            this.yonetimGroupBox.Controls.Add(this.label2);
+            this.yonetimGroupBox.Controls.Add(this.label1);
             this.yonetimGroupBox.Controls.Add(this.notificationYonetim);
             this.yonetimGroupBox.Controls.Add(this.ozelNotBilgisiTextBoxYonetim);
             this.yonetimGroupBox.Controls.Add(this.aidatBilgisiTextBoxYonetim);
@@ -513,6 +521,54 @@
             // 
             this.notificationTimer.Tick += new System.EventHandler(this.notificationTimer_Tick);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Nunito Sans", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(133)))), ((int)(((byte)(198)))));
+            this.label1.Location = new System.Drawing.Point(640, 82);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(57, 16);
+            this.label1.TabIndex = 26;
+            this.label1.Text = "Ad Soyad";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Nunito Sans", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(133)))), ((int)(((byte)(198)))));
+            this.label2.Location = new System.Drawing.Point(743, 82);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(60, 16);
+            this.label2.TabIndex = 27;
+            this.label2.Text = "Kat Bilgisi";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Nunito Sans", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(133)))), ((int)(((byte)(198)))));
+            this.label3.Location = new System.Drawing.Point(818, 82);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(35, 16);
+            this.label3.TabIndex = 28;
+            this.label3.Text = "Aidat";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Nunito Sans", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(133)))), ((int)(((byte)(198)))));
+            this.label4.Location = new System.Drawing.Point(886, 82);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(52, 16);
+            this.label4.TabIndex = 29;
+            this.label4.Text = "Özel Not";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -586,6 +642,10 @@
         private System.Windows.Forms.TextBox adSoyadTextBoxYonetim;
         private System.Windows.Forms.Label notificationYonetim;
         private System.Windows.Forms.Timer notificationTimer;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
 
         //
 

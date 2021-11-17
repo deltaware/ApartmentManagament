@@ -72,8 +72,6 @@ namespace deltaware
 
         }
 
-
-
         private void panelMouseEnter(object sender, EventArgs e)
         {
             Label label = (Label)sender;
@@ -132,7 +130,35 @@ namespace deltaware
                                 ozelNotBilgisiList.Items.Add("-");
                             else
                                 ozelNotBilgisiList.Items.Add(ozelNotBilgisiTextBoxYonetim.Text);
+                            clearTextBox();
                             notification(2);
+                        }else if (adSoyadListYonetim.Items.Contains(adSoyadTextBoxYonetim.Text))
+                        {
+                            int id = 0;
+                            for (int i = 0; i < adSoyadListYonetim.Items.Count; i++)
+                            {
+                                if (adSoyadListYonetim.Items[i].Equals(adSoyadTextBoxYonetim.Text)) {
+                                    id = i;
+                                }
+                            }
+                            adSoyadListYonetim.Items[id] = adSoyadTextBoxYonetim.Text;
+                            if (!katBilgisiListYonetim.Items.Contains(katVerisiTextBoxYonetim.Text))
+                            {
+                                katBilgisiListYonetim.Items[id] = katVerisiTextBoxYonetim.Text;
+                            }
+                            else
+                            {
+                                SystemSounds.Beep.Play();
+                                notification(6);
+                            }
+                            aidatBedeliListYonetim.Items[id] = aidatBilgisiTextBoxYonetim.Text;
+                            ozelNotBilgisiList.Items[id] = ozelNotBilgisiTextBoxYonetim.Text;
+                        }else if (katBilgisiListYonetim.Items.Contains(katVerisiTextBoxYonetim.Text)) {
+                            SystemSounds.Beep.Play();
+                            notification(6);
+                        }else if (adSoyadListYonetim.Items.Contains(adSoyadTextBoxYonetim.Text)){
+                            SystemSounds.Beep.Play();
+                            notification(7);
                         }
                         else
                         {
@@ -141,14 +167,49 @@ namespace deltaware
                         }
                         break;
                     case "RemoveButtonYonetim":
+                        if (adSoyadListYonetim.SelectedItem != null)
+                        {
+                            int id = adSoyadListYonetim.SelectedIndex;
+                            adSoyadListYonetim.Items.RemoveAt(id);
+                            katBilgisiListYonetim.Items.RemoveAt(id);
+                            aidatBedeliListYonetim.Items.RemoveAt(id);
+                            ozelNotBilgisiList.Items.RemoveAt(id);
+                            notification(3);
+                        }else
+                        {
+                            SystemSounds.Beep.Play();
+                            notification(4);
+                        }
                         break;
                     case "ChangeButtonYonetim":
+                        if (adSoyadListYonetim.SelectedItem != null)
+                        {
+                            int id = adSoyadListYonetim.SelectedIndex;
+                            adSoyadTextBoxYonetim.Text = adSoyadListYonetim.Items[id].ToString();
+                            katVerisiTextBoxYonetim.Text = katBilgisiListYonetim.Items[id].ToString();
+                            aidatBilgisiTextBoxYonetim.Text = aidatBedeliListYonetim.Items[id].ToString();
+                            ozelNotBilgisiTextBoxYonetim.Text = ozelNotBilgisiList.Items[id].ToString();
+                            notification(5);
+                        }else
+                        {
+                            SystemSounds.Beep.Play();
+                            notification(4);
+                        }
                         break;
                     default:
                         break;
                 }
             }
         }
+
+        public void clearTextBox()
+        {
+            adSoyadTextBoxYonetim.Text = "";
+            katVerisiTextBoxYonetim.Text = "";
+            aidatBilgisiTextBoxYonetim.Text = "";
+            ozelNotBilgisiTextBoxYonetim.Text = "";
+        }
+
         private void yonetimTextBoxClick(object sender, EventArgs e)
         {
             TextBox textBox = (TextBox)sender;
@@ -210,7 +271,7 @@ namespace deltaware
                     adSoyadBGYonetim.Image = global::deltaware.Properties.Resources.unselectedTextBox;
                     textBox.BackColor = System.Drawing.Color.FromArgb(((int)(((246)))), ((int)(((247)))), ((int)(((251)))));
                     textBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(133)))), ((int)(((byte)(198)))));
-                    if (!IsAlpha(textBox.Text) && textBox.Text != "")
+                    if (!IsAlpha(textBox.Text) && textBox.Text != "" && textBox.Text != "Ad Soyad")
                     {
                         SystemSounds.Hand.Play();
                         check = true;
@@ -227,7 +288,7 @@ namespace deltaware
                     katVerisiBGYonetim.Image = global::deltaware.Properties.Resources.unselectedTextBox;
                     textBox.BackColor = System.Drawing.Color.FromArgb(((int)(((246)))), ((int)(((247)))), ((int)(((251)))));
                     textBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(133)))), ((int)(((byte)(198)))));
-                    if (!IsAlphaNumeric(textBox.Text) && textBox.Text != "")
+                    if (!IsAlphaNumeric(textBox.Text) && textBox.Text != "" && textBox.Text != "Kat Bilgisi")
                     {
                         SystemSounds.Hand.Play();
                         textBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
@@ -245,7 +306,7 @@ namespace deltaware
                     aidatBilgisiBGYonetim.Image = global::deltaware.Properties.Resources.unselectedTextBox;
                     textBox.BackColor = System.Drawing.Color.FromArgb(((int)(((246)))), ((int)(((247)))), ((int)(((251)))));
                     textBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(133)))), ((int)(((byte)(198)))));
-                    if (!IsNumeric(textBox.Text) && textBox.Text != "")
+                    if (!IsNumeric(textBox.Text) && textBox.Text != "" && textBox.Text != "Aidat Bilgisi")
                     {
                         SystemSounds.Hand.Play();
                         textBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
@@ -278,12 +339,32 @@ namespace deltaware
                     notificationYonetim.ForeColor = System.Drawing.Color.FromArgb(198, 45, 45);
                     break;
                 case 1:
-                    message = "Boş veya geçersiz bir veri girişi yapılmaya çalışıldı. Yada bu Ad ve Soyad ile kayıtlı bir kayıt bulunmakta.";
+                    message = "Boş veya geçersiz bir veri girişi yapılmaya çalışıldı.";
                     notificationYonetim.ForeColor = System.Drawing.Color.FromArgb(198, 45, 45);
                     break;
                 case 2:
                     message = "Başarılı bir şekilde veri oluşturuldu.";
                     notificationYonetim.ForeColor = System.Drawing.Color.FromArgb(80, 198, 45);
+                    break;
+                case 3:
+                    message = "Başarılı bir şekilde veri silindi.";
+                    notificationYonetim.ForeColor = System.Drawing.Color.FromArgb(80, 198, 45);
+                    break;
+                case 4:
+                    message = "Lütfen sağdaki veri liste bölümünden silmek istediğiniz Ad Soyad'ı seçin.";
+                    notificationYonetim.ForeColor = System.Drawing.Color.FromArgb(198, 45, 45);
+                    break;
+                case 5:
+                    message = "Veriler yazı kutularına çekildi. **Ad Soyad verisi değişirse yeni kullanıcı atanır.**";
+                    notificationYonetim.ForeColor = System.Drawing.Color.FromArgb(80, 198, 45);
+                    break;
+                case 6:
+                    message = "Böyle bir kat bilgisi bulunmaktadır.";
+                    notificationYonetim.ForeColor = System.Drawing.Color.FromArgb(198, 45, 45);
+                    break;
+                case 7:
+                    message = "Böyle bir Ad Soyad bilgisi bulunmaktadır.";
+                    notificationYonetim.ForeColor = System.Drawing.Color.FromArgb(198, 45, 45);
                     break;
                 default:
                     break;
@@ -309,7 +390,7 @@ namespace deltaware
         }
         public bool IsAlpha(string input)
         {
-            return Regex.IsMatch(input, "^[a-zA-Z]+$");
+            return Regex.IsMatch(input.Replace(" ", ""), "^[a-zA-Z]+$");
         }
 
         public bool IsAlphaNumeric(string input)

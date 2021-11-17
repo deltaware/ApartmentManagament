@@ -5,6 +5,11 @@
       "ProjectGuid": "49c55d7b-d4d1-437f-b126-902ecc1c4aae",
       "DisplayName": "deltaware",
       "ColorIndex": 0
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Diğer Dosyalar",
+      "ColorIndex": -1
     }
   },
   "NextColorIndex": 1
